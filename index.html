@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Книжный продавец</title>
     <link rel="stylesheet" href="styles.css">
     <link
@@ -21,34 +24,37 @@
         </div>
     </div>
     <div id="game-container">
-        <!-- Header with stats -->
-        <header id="game-header">
-            <div class="stat">
-                <span class="stat-icon">💰</span>
-                <span id="balance">0</span> ₽
-            </div>
-            <div class="stat">
-                <span class="stat-icon">📚</span>
-                <span id="sold-unique">0</span>/50 разных
-            </div>
-            <div class="stat">
-                <span class="stat-icon">📖</span>
-                <span id="sold-total">0</span>/200 всего
-            </div>
-            <div class="stat">
-                <span class="stat-icon">📅</span>
-                День&nbsp;<span id="day-number">1</span>
-            </div>
-        </header>
+        <!-- Side panel (for landscape mode) -->
+        <div class="side-panel">
+            <!-- Header with stats -->
+            <header id="game-header">
+                <div class="stat">
+                    <span class="stat-icon">💰</span>
+                    <span id="balance">0</span> ₽
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">📚</span>
+                    <span id="sold-unique">0</span>/50 разных
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">📖</span>
+                    <span id="sold-total">0</span>/200 всего
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">📅</span>
+                    День&nbsp;<span id="day-number">1</span>
+                </div>
+            </header>
 
-        <!-- Customer panel -->
-        <div id="customer-panel">
-            <div id="customer-avatar">🧑</div>
-            <div id="customer-speech">
-                <p id="customer-request">Нажмите "Начать день" чтобы открыть магазин</p>
-            </div>
-            <div id="customer-counter">
-                Покупатель: <span id="current-customer">0</span>/<span id="total-customers">0</span>
+            <!-- Customer panel -->
+            <div id="customer-panel">
+                <div id="customer-avatar">🧑</div>
+                <div id="customer-speech">
+                    <p id="customer-request">Нажмите "Начать день" чтобы открыть магазин</p>
+                </div>
+                <div id="customer-counter">
+                    Покупатель: <span id="current-customer">0</span>/<span id="total-customers">0</span>
+                </div>
             </div>
         </div>
 
@@ -77,10 +83,10 @@
                     <p id="modal-description" class="modal-description"></p>
                     <p id="modal-genres"></p>
                     <p id="modal-price"></p>
-                </div>
-                <div class="modal-actions">
-                    <button id="btn-offer" class="btn btn-primary">Предложить</button>
-                    <button id="btn-close-modal" class="btn btn-secondary">Закрыть</button>
+                    <div class="modal-actions">
+                        <button id="btn-offer" class="btn btn-primary">Предложить</button>
+                        <button id="btn-close-modal" class="btn btn-secondary">Закрыть</button>
+                    </div>
                 </div>
             </div>
         </div>
