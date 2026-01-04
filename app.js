@@ -9,7 +9,7 @@ class BookTraderGame {
         this.day = 1;
         this.soldUnique = new Set();
         this.soldTotal = 0;
-        this.shelf = []; // 10 slots
+        this.shelf = []; // 8 slots
         this.ownedBooks = new Set(); // books we own
         this.shopBookOrder = []; // randomized order of books in shop
 
@@ -373,8 +373,8 @@ class BookTraderGame {
     renderShelf() {
         this.shelfEl.innerHTML = '';
 
-        const booksPerRow = 5;
-        const totalSlots = 10;
+        const booksPerRow = 2;
+        const totalSlots = 8;
         const rowCount = Math.ceil(totalSlots / booksPerRow);
 
         for (let row = 0; row < rowCount; row++) {
